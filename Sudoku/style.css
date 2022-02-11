@@ -1,0 +1,204 @@
+body {
+  background-color: rgb(37, 37, 37);
+}
+.container {
+  display: grid;
+  grid-template-rows: 50px 75px 50px 50px 10px auto;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  place-items: center;
+  background-color: rgb(208, 242, 255);
+  width: 1000px;
+  height: 900px;
+  margin: 0 auto;
+  border-radius: 9px;
+  /* margin-top: 50px; */
+}
+td,
+th {
+  border: 3px solid rgb(190, 190, 190);
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+}
+tr {
+  background-color: #eee;
+}
+tr:nth-child(3n + 0) {
+  border-bottom: 5px solid rgb(200, 200, 200);
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: -20px;
+}
+.button {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-radius: 9px;
+}
+/* .button1 {
+  column: 1/2;
+  row: 2/3;
+}
+.button2 {
+  column: 2/3;
+  row: 2/3;
+} */
+
+.butoane {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  border-radius: 9px;
+  font-size: 12px;
+}
+.button,
+.button1,
+.button2 {
+  border-radius: 9px;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  max-width: fit-content;
+  max-height: fit-content;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(37, 37, 37);
+  letter-spacing: 1px;
+  position: relative;
+  transition: ease-out 0.8s;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.button:hover,
+.button1:hover,
+.button2:hover {
+  color: rgb(233, 233, 233);
+  transition: ease-out 0.8s;
+  border-radius: 9px;
+}
+
+.button:before,
+.button1:before,
+.button2:before {
+  transition: 0.8s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #14bfc5;
+  border-radius: 9px;
+}
+.button:hover:before,
+.button1:hover:before,
+.button2:hover:before {
+  transition: 0.8s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  border-radius: 9px;
+  border: 3px solid rgb(37, 37, 37);
+}
+.button:hover:before {
+  border: 3px solid rgb(37, 37, 37);
+  transition: 0;
+  border-radius: 9px;
+}
+.button1,
+.button2 {
+  margin: 10px;
+}
+.selector {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: -20px;
+}
+.fixed {
+  background-color: rgb(37, 37, 37);
+
+  color: rgb(219, 219, 219);
+  font-size: 1.2rem;
+}
+.dif {
+  font-size: 1rem;
+}
+td:nth-child(3n + 0) {
+  border-right: 5px solid rgb(200, 200, 200);
+}
+td:first-child {
+  border-left: 5px solid rgb(200, 200, 200);
+}
+tr:first-child {
+  border-top: 5px solid rgb(200, 200, 200);
+}
+
+table {
+  max-width: fit-content;
+  max-height: fit-content;
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: 1rem;
+
+  justify-content: center;
+
+  align-items: center;
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  margin-top: 500px;
+}
+input {
+  padding: 0;
+  text-align: center;
+  border: 0;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #eee;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #dbdf10;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+  display: none;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  border-radius: 9px;
+  border: 1px solid black;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 40px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.closebtn:hover {
+  color: black;
+  transition: all 0.8s;
+}

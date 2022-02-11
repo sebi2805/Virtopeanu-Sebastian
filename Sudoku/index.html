@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+  <body>
+    <div class="container">
+   <div class="alert">
+     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+     <strong>Gresit!</strong> Ceva este in neregula.
+   </div>
+    <button class="button">🔄JOC NOU</button>
+   <div class="butoane"> <button class="button1">VERIFICA</button>
+    <button class="button2">REZOLVA</button>
+  
+    <div class="selector">
+    <label for="dificultate">Alege o dificultate:</label>
+<select name="dificultate" id="dificultate">
+  <div class="dif">
+    <option value="30" class="dif">usor</option>
+  <option value="40" class="dif">mediu</option>
+  <option value="50" class="dif">greu</option>
+</div>
+</select></div></div>
+    <table class="table">
+      
+      <tr>
+ 
+        <td class="a0 all fixed" id="a00"><input type="text" maxlength="1"/></td>
+        <td class="a0 all fixed" id="a01"> <input type="text" maxlength="1"/></td>
+        <td class="a0 all fixed" id="a02"> <input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b00"> <input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b01"> <input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b02"> <input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c00"> <input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c01"> <input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c02"> <input type="text" maxlength="1"/></td>
+        
+      </tr>
+      <tr>
+        <td class="a0 all fixed" id="a10"><input type="text" maxlength="1"/></td>
+        <td class="a0 all fixed" id="a11"><input type="text" maxlength="1"/></td>
+        <td class="a0 all fixed" id="a12"><input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b10"><input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b11"><input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b12"><input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c10"><input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c11"><input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c12"><input type="text" maxlength="1"/></td>
+        
+      </tr>
+      <tr>
+        <td class="a0 all fixed" id="a20"><input type="text" maxlength="1"/></td>
+        <td class="a0 all fixed" id="a21"><input type="text" maxlength="1"/></td>
+        <td class="a0 all fixed" id="a22"><input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b20"><input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b21"><input type="text" maxlength="1"/></td>
+        <td class="b0 all fixed" id="b22"><input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c20"><input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c21"><input type="text" maxlength="1"/></td>
+        <td class="c0 all fixed" id="c22"><input type="text" maxlength="1"/></td>
+        
+      </tr>
+      <tr>
+        <td class="d0 all fixed" id="d00"><input type="text" maxlength="1"/></td>
+        <td class="d0 all fixed" id="d01"><input type="text" maxlength="1"/></td>
+        <td class="d0 all fixed" id="d02"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e00"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e01"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e02"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f00"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f01"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f02"><input type="text" maxlength="1"/></td>
+        
+ 
+      </tr>
+      <tr>
+        <td class="d0 all fixed" id="d10"><input type="text" maxlength="1"/></td>
+        <td class="d0 all fixed" id="d11"><input type="text" maxlength="1"/></td>
+        <td class="d0 all fixed" id="d12"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e10"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e11"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e12"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f10"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f11"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f12"><input type="text" maxlength="1"/></td>
+    
+        
+      </tr>
+      <tr>
+        <td class="d0 all fixed" id="d20"><input type="text" maxlength="1"/></td>
+        <td class="d0 all fixed" id="d21"><input type="text" maxlength="1"/></td>
+        <td class="d0 all fixed" id="d22"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e20"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e21"><input type="text" maxlength="1"/></td>
+        <td class="e0 all fixed" id="e22"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f20"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f21"><input type="text" maxlength="1"/></td>
+        <td class="f0 all fixed" id="f22"><input type="text" maxlength="1"/></td>
+        
+      </tr>
+      <tr> 
+        <td class="g0 all fixed" id="g00"><input type="text" maxlength="1"/></td>
+        <td class="g0 all fixed" id="g01"><input type="text" maxlength="1"/></td>
+        <td class="g0 all fixed" id="g02"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h00"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h01"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h02"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i00"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i01"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i02"><input type="text" maxlength="1"/></td>
+        
+      </tr>
+      <tr>
+        <td class="g0 all fixed" id="g10"><input type="text" maxlength="1"/></td>
+        <td class="g0 all fixed" id="g11"><input type="text" maxlength="1"/></td>
+        <td class="g0 all fixed" id="g12"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h10"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h11"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h12"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i10"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i11"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i12"><input type="text" maxlength="1"/></td>
+      
+        
+        
+      </tr>
+      <tr>
+        <td class="g0 all fixed" id="g20"><input type="text" maxlength="1"/></td>
+        <td class="g0 all fixed" id="g21"><input type="text" maxlength="1"/></td>
+        <td class="g0 all fixed" id="g22"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h20"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h21"><input type="text" maxlength="1"/></td>
+        <td class="h0 all fixed" id="h22"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i20"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i21"><input type="text" maxlength="1"/></td>
+        <td class="i0 all fixed" id="i22"><input type="text" maxlength="1"/></td>
+
+       
+        
+      </tr>
+      
+    </table>
+    <script src="json.js"></script>
+  </div>
+  </body>
+  </html>
+  

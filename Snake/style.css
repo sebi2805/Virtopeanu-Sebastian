@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(212, 212, 212);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 600px;
+  align-items: center;
+  justify-items: center;
+}
+#myCanvas {
+  align-items: center;
+  grid-row: 2/3;
+}
+
+.score {
+  grid-row: 1/2;
+  background-color: #14bfc5;
+  border: 3px solid rgb(51, 51, 51);
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  justify-self: center;
+  border-radius: 9px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+}

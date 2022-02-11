@@ -1,0 +1,121 @@
+body {
+  background-color: rgb(39, 39, 39);
+}
+.grid {
+  display: grid;
+  background-color: #575757;
+  grid-template-columns: 100px 232.5px 100px;
+  grid-template-rows: 200px 100px 200px;
+  row-gap: 10px;
+  width: 700px;
+  height: 700px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 360px;
+  margin-top: 50px;
+}
+.player0 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background-color: rgb(228, 228, 228);
+  border: 2px solid #14bfc5;
+  height: 50px;
+  width: auto;
+  align-self: center;
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 9px;
+}
+.player1 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color: rgb(228, 228, 228);
+  border: 2px solid #14bfc5;
+  height: 50px;
+  width: auto;
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 9px;
+}
+.container {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  margin-top: -150px;
+}
+.cell {
+  height: 70px;
+  width: 70px;
+  background-color: rgb(192, 192, 192);
+  border: 2px solid #14bfc5;
+  border-radius: 9px;
+}
+
+.images {
+  height: 70px;
+  width: 70px;
+  outline: none;
+  margin-left: 1px;
+}
+.winner {
+  background-color: #14bfc5;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  max-width: fit-content;
+  max-height: fit-content;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(37, 37, 37);
+  letter-spacing: 1px;
+  position: relative;
+  transition: ease-out 0.8s;
+  z-index: 1;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-left: 70px;
+  margin-top: -150px;
+  border-radius: 9px;
+}
+
+.button:hover {
+  color: rgb(233, 233, 233);
+  border-radius: 9px;
+  transition: ease-out 0.8s;
+}
+
+.button:before {
+  transition: 0.8s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #14bfc5;
+  border-radius: 9px;
+}
+.button:hover:before {
+  transition: 0.8s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  border-radius: 9px;
+}
+.button:hover:before {
+  border: 3px solid rgb(37, 37, 37);
+  transition: 0;
+  border-radius: 9px;
+}
+[src=""] {
+  visibility: hidden;
+}
