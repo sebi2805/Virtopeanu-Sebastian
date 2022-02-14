@@ -76,7 +76,11 @@ function loop() {
     }
 
     for (var i = index + 1; i < snake.cells.length; i++) {
-      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+       if (
+        cell.x === snake.cells[i].x &&
+        cell.y === snake.cells[i].y &&
+        snake.maxCells != 4
+      )  {
         snake.x = 240;
         snake.y = 240;
         snake.cells = [];
